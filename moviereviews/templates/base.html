@@ -8,7 +8,11 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}">Movies</a>
+        <a class="navbar-brand" href="{% url 'home' %}">
+        {% load static %}
+        <img src="{% static 'images/home.png' %}" alt="" width="30" height="24" class="d-inline-block align-text-top" />
+        Movies
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bstarget="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" arialabel="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,3 +39,13 @@
     {% block content %}
     {% endblock content %}
 </div>
+
+<footer class="text-center text-lg-start bg-light text-muted mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="text-center p-4">
+                <h4>© 2025 Copyright - Jean Londoño :)</h4>
+            </div>
+        </div>
+    </div>
+</footer>
