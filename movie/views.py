@@ -25,6 +25,10 @@ def about(request):
    # return HttpResponse('<h1>This is the "about" section<h1>')
    return render(request, 'about.html')
 
+def signup(request):
+   email = request.GET.get('email')
+   return render(request, 'signup.html', {'email': email})
+
 def statistics_view(request):
     matplotlib.use('Agg')
     # Obtener todas las películas
